@@ -1,17 +1,19 @@
 package net.adamraichu.firstmod;
 
 import net.fabricmc.api.ModInitializer;
-// import java.io.IOException;
-// import java.util.logging.Level;
-// import java.util.logging.Logger;
-// import java.util.logging.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import static net.minecraft.server.command.CommandManager.*;
 
 public class FirstMod implements ModInitializer {
-	public static final String MOD_ID = "firstmod";
-	// public static final java.util.logging.Logger LOGGER = Logger.getLogger(MOD_ID);
-
-	@Override
-	public void onInitialize() {
-		// LOGGER.info("AdamRaichu mod initialized");
-	}
+  @Override
+  public void onInitialize() {
+    CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> dispatcher.register(literal("foo")
+        .executes(context -> {
+      // For versions below 1.19, replace "Text.literal" with "new LiteralText".
+      context.getSource().sendMessage(Text.literal("Called /foo with no arguments"));
+ 
+      return 1;
+    })));
+  }
 }
