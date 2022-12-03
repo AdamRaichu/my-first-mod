@@ -1,31 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "firstmod",
   "version": "${version}",
-
-  "name": "Example Mod",
+  "name": "My First Mod",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "AdamRaichu"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
-
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/modid/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.AdamRaichu.firstmod.FirstMod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "firstmod.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.14.10",
     "fabric-api": "*",
