@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 // import static net.minecraft.server.command.CommandManager.*;
 
 public class FirstMod implements ModInitializer {
-	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
+	public static final Logger LOGGER = LoggerFactory.getLogger("firstmod");
 
   @Override
   public void onInitialize() {
