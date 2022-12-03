@@ -6,14 +6,10 @@ import org.slf4j.LoggerFactory;
 // import static net.minecraft.server.command.CommandManager.*;
 
 public class FirstMod implements ModInitializer {
+	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
+
   @Override
   public void onInitialize() {
-    // CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> dispatcher.register(literal("foo")
-    //     .executes(context -> {
-    //   // For versions below 1.19, replace "Text.literal" with "new LiteralText".
-    //   context.getSource().sendMessage(Text.literal("Called /foo with no arguments"));
- 
-    //   return 1;
-    // })));
+		LOGGER.info("Hello Fabric world!");
   }
 }
