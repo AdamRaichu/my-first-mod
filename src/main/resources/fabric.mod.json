@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.AdamRaichu.firstmod.FirstMod"
+      "net.adamraichu.firstmod.FirstMod"
     ],
     "client": [
       "net.adamraichu.firstmod.FirstModClient"
