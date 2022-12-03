@@ -8,10 +8,10 @@ import java.util.logging.*;
 
 public class FirstMod implements ModInitializer {
 	public static final String MOD_ID = "firstmod";
-	public static final java.util.logging.Logger LOGGER = Logger.getLogger(MOD_ID);
+	// public static final java.util.logging.Logger LOGGER = Logger.getLogger(MOD_ID);
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("AdamRaichu mod initialized");
+		// LOGGER.info("AdamRaichu mod initialized");
 	}
 }
