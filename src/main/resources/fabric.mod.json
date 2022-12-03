@@ -17,6 +17,9 @@
   "entrypoints": {
     "main": [
       "net.AdamRaichu.firstmod.FirstMod"
+    ],
+    "client": [
+      "net.adamraichu.firstmod.FirstModClient"
     ]
   },
   "mixins": [
