@@ -8,13 +8,13 @@ public class FirstModClient implements ClientModInitializer {
   @Override
   public void onInitializeClient() {
 
-    ClientCommandRegistrationCallback.EVENT.register { dispatcher, _ ->
+    ClientCommandRegistrationCallback.EVENT.register ((dispatcher, registryAccess, environment) -> {
       dispatcher.register(
         literal("firstmod").executes(context -> {
           context.getSource().sendMessage(Text.literal("Called /firstmod with no arguments"))
         })
       )
-    }
+    })
 
   }
 }
