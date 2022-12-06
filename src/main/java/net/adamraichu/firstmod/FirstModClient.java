@@ -1,10 +1,9 @@
 package net.adamraichu.firstmod;
 
 import net.fabricmc.api.ClientModInitializer;
-// import static net.minecraft.server.command.CommandManager.*;
-// import com.mojang.brigadier.builder.ArgumentBuilder;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
+import net.minecraft.text.Text;
 
 public class FirstModClient implements ClientModInitializer {
   @Override
@@ -13,9 +12,9 @@ public class FirstModClient implements ClientModInitializer {
     ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
       dispatcher.register(
           ClientCommandManager.literal("firstmod").executes(context -> {
-            context.getSource().sendMessage(ClientCommandManager.literal("Called /firstmod with no arguments"));
+            context.getSource().sendFeedback(Text.literal("Executed /firstmod"));
+            return 0;
           }));
     });
-
   }
 }
