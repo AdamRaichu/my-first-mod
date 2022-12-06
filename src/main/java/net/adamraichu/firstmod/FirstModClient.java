@@ -13,6 +13,7 @@ public class FirstModClient implements ClientModInitializer {
       dispatcher.register(
           ClientCommandManager.literal("firstmod").executes(context -> {
             context.getSource().sendFeedback(Text.literal("Executed /firstmod"));
+            FirstMod.LOGGER.info("Executed /firstmod");
             return 0;
           }));
     });
