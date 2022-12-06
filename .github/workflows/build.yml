@@ -22,7 +22,7 @@ jobs:
         with:
           script: |
             const fs = require("fs");
-            fs.readFile("gradle.properties", (err, old) => {
+            fs.readFile("gradle.properties", "utf8", (err, old) => {
               if (err) throw err;
               fs.readFile("version.txt", (err, v) => {
                 if (err) throw err;
